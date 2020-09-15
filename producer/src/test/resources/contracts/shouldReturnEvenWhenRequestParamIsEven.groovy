@@ -13,5 +13,8 @@ Contract.make {
     response {
         body("{ \"age\": 31, \"sex\": \"male\" } ")
         status 200
+        headers {
+            contentType(applicationJson())
+        }
     }
 }

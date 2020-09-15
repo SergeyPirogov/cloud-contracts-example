@@ -22,19 +22,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureJsonTesters
 @AutoConfigureStubRunner(
         stubsMode = StubRunnerProperties.StubsMode.LOCAL,
-        ids = "com.example.producer:producer:+:stubs:8090")
+        ids = "com.example.producer:producer:+:stubs:8086")
 public class BaseTest {
 
     @Autowired
-    private MockMvc mockMvc;
-
-    @Test
-    public void given_WhenPassEvenNumberInQueryParam_ThenReturnEven()
-            throws Exception {
-
-        mockMvc.perform(MockMvcRequestBuilders.get("/beer?year=29/07/1989")
-                .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(content().string("{\"age\":31,\"beerAllowed\":true, \"sex\": \"male\"}"));
-    }
+    protected MockMvc mockMvc;
 }
