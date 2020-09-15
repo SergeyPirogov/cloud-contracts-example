@@ -21,7 +21,7 @@ public class AgeController {
 
         Period period = Period.between(birth, now);
 
-        return ResponseEntity.ok(new AgeDto(period.getYears()));
+        return ResponseEntity.ok(new AgeDto(period.getYears(), "male"));
     }
 
 }

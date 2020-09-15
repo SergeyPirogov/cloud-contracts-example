@@ -11,7 +11,7 @@ Contract.make {
         }
     }
     response {
-        body("{ \"age\": 31 } ")
+        body("{ \"age\": 31, \"sex\": \"male\" } ")
         status 200
     }
 }

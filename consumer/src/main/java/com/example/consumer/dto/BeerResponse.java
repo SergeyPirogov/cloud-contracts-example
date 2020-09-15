@@ -4,10 +4,20 @@ public class BeerResponse {
 
     private int age;
     private boolean beerAllowed;
+    private String sex;
 
-    public BeerResponse(int age, boolean beerAllowed) {
+    public BeerResponse(int age, String sex, boolean beerAllowed) {
         this.age = age;
+        this.sex = sex;
         this.beerAllowed = beerAllowed;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 
     public int getAge() {
