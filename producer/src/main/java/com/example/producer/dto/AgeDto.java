@@ -12,5 +12,5 @@ import lombok.Setter;
 public class AgeDto {
 
     private int age;
-    private String sex;
+//    private String sex;
 }

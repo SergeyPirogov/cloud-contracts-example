@@ -16,6 +16,6 @@ public class BeerTest extends BaseTest {
         mockMvc.perform(MockMvcRequestBuilders.get("/beer?year=29/07/1989")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().string("{\"age\":31,\"beerAllowed\":true,\"sex\":\"male\"}"));
+                .andExpect(content().string("{\"age\":31,\"beerAllowed\":true}"));
     }
 }

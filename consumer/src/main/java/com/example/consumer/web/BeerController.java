@@ -32,7 +32,7 @@ public class BeerController {
         AgeDto ageDto = responseEntity.getBody();
         int age = ageDto.getAge();
         boolean beerAllowed = age > 18;
-        return ResponseEntity.ok(new BeerResponse(age, ageDto.getSex(), beerAllowed));
+        return ResponseEntity.ok(new BeerResponse(age,  beerAllowed));
     }
 
 }
