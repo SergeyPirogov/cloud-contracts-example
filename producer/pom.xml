@@ -76,7 +76,7 @@
                     <testFramework>JUNIT5</testFramework>
                     <contractsRepositoryUrl>git://https://github.com/SergeyPirogov/cc-stubs.git</contractsRepositoryUrl>
                     <contractDependency>
-                        <groupId>com.examole.producer</groupId>
+                        <groupId>com.example.producer</groupId>
                         <artifactId>producer</artifactId>
                         <version>0.0.1</version>
                     </contractDependency>

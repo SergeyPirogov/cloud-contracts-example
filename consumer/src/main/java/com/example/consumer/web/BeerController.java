@@ -17,6 +17,11 @@ public class BeerController {
 
     @Autowired
     private RestTemplate restTemplate;
+    int port = 8086;
+
+    public void setPort(int port) {
+        this.port = port;
+    }
 
     @GetMapping("/beer")
     public ResponseEntity<BeerResponse> checkOddAndEven(@RequestParam("year") String year) {
@@ -24,7 +29,7 @@ public class BeerController {
         httpHeaders.add("Content-Type", "application/json");
 
         ResponseEntity<AgeDto> responseEntity = restTemplate.exchange(
-                "http://localhost:8086/age?year=" + year,
+                "http://localhost:"+this.port+"/age?year=" + year,
                 HttpMethod.GET,
                 new HttpEntity<>(httpHeaders),
                 AgeDto.class);
