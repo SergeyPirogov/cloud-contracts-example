@@ -74,7 +74,24 @@
                         com.example.producer.test.BaseTest
                     </baseClassForTests>
                     <testFramework>JUNIT5</testFramework>
+                    <contractDependency>
+                        <groupId>com.example.producer</groupId>
+                        <artifactId>producer</artifactId>
+                        <version>0.0.1-SNAPSHOT</version>
+                    </contractDependency>
+                    <contractsRepositoryUrl>git://https://github.com/SergeyPirogov/cc-stubs.git</contractsRepositoryUrl>
+                    <contractsMode>REMOTE</contractsMode>
                 </configuration>
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            &lt;!&ndash; By default we will not push the stubs back to SCM,-->
+<!--                            you have to explicitly add it as a goal &ndash;&gt;-->
+<!--                            <goal>pushStubsToScm</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
             </plugin>
         </plugins>
     </build>
