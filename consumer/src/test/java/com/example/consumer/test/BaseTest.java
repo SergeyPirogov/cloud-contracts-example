@@ -15,8 +15,13 @@ import org.springframework.test.web.servlet.MockMvc;
 @AutoConfigureMockMvc
 @AutoConfigureJsonTesters
 @AutoConfigureStubRunner(
-        stubsMode = StubRunnerProperties.StubsMode.LOCAL,
-        ids = "com.example.producer:producer:+:stubs:8086")
+        stubsMode = StubRunnerProperties.StubsMode.REMOTE,
+        repositoryRoot = "git://https://github.com/SergeyPirogov/cc-stubs.git",
+        ids = "com.examole.producer:producer:0.0.1")
+
+//@AutoConfigureStubRunner(
+//        stubsMode = StubRunnerProperties.StubsMode.LOCAL,
+//        ids = "com.example.producer:producer:+:stubs:8086")
 public class BaseTest {
 
     @Autowired

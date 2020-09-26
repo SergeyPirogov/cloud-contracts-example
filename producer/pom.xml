@@ -74,6 +74,13 @@
                         com.example.producer.test.BaseTest
                     </baseClassForTests>
                     <testFramework>JUNIT5</testFramework>
+                    <contractsRepositoryUrl>git://https://github.com/SergeyPirogov/cc-stubs.git</contractsRepositoryUrl>
+                    <contractDependency>
+                        <groupId>com.examole.producer</groupId>
+                        <artifactId>producer</artifactId>
+                        <version>0.0.1</version>
+                    </contractDependency>
+                    <contractsMode>LOCAL</contractsMode>
                 </configuration>
             </plugin>
         </plugins>
